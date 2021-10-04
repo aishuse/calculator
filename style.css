@@ -1,0 +1,18 @@
+.calc{
+    width: 450px;
+    height: 550px;
+    background: rgb(190, 174, 174) ;
+    border: 2px solid black;
+}
+#op{
+    width: 375px;
+    height: 50px;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+}
+#op{
+    pointer-events: none;
+}

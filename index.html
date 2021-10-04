@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 calc">
+                <div>
+                    <h2 style="text-align: center;">CALCULATOR</h2>
+                </div>
+                <div class="screen ms-4 mt-4">
+                    <input type="text" name="" id="op">
+                </div>
+<div class="mt-4">
+    <button onclick="clearDisplay()" class="btn btn-secondary ms-5 ">C</button>
+</div>
+                <div class="mt-4">
+                    <button onclick="btnclick(7)" class="btn btn-secondary ms-5 ">7</button>
+                    <button onclick="btnclick(8)" class="btn btn-secondary ms-5 ">8</button>
+                    <button onclick="btnclick(9)" class="btn btn-secondary ms-5 ">9</button>
+                    <button onclick="btnclick('/')" class="btn btn-secondary ms-5">/</button>
+
+                </div>
+
+                
+                <div class="mt-4">
+                    <button onclick="btnclick(4)" class="btn btn-secondary ms-5 ">4</button>
+                    <button onclick="btnclick(5)" class="btn btn-secondary ms-5 ">5</button>
+                    <button onclick="btnclick(6)" class="btn btn-secondary ms-5 ">6</button>
+                    <button onclick="btnclick('*')" class="btn btn-secondary ms-5">*</button>
+
+                </div>
+
+                
+                <div class="mt-4">
+                    <button onclick="btnclick(1)" class="btn btn-secondary ms-5 ">1</button>
+                    <button onclick="btnclick(2)" class="btn btn-secondary ms-5 ">2</button>
+                    <button onclick="btnclick(3)" class="btn btn-secondary ms-5 ">3</button>
+                    <button onclick="btnclick('-')" class="btn btn-secondary ms-5">-</button>
+
+                </div>
+
+                
+                <div class="mt-4">
+                    <button onclick="btnclick('.')" class="btn btn-secondary ms-5 ">.</button>
+                    <button onclick="btnclick(0)" class="btn btn-secondary ms-5 ">0</button>
+                    <button onclick="equalclick('=')" class="btn btn-secondary ms-5 ">=</button>
+                    <button onclick="btnclick('+')" class="btn btn-secondary ms-5">+</button>
+
+                </div>
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+
+
+
+   <script>
+       
+
+function btnclick(val){
+    console.log(val)
+
+    document.getElementById('op').value+=val;
+
+}
+
+function clearDisplay(){
+    document.getElementById('op').value=""
+}
+
+
+
+function equalclick(){
+    var text=document.getElementById('op').value
+    var result=eval(text)
+    document.getElementById('op').value=result 
+}
+
+
+
+   </script> 
+  </body>
+</html>
